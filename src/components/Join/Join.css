@@ -1,18 +1,11 @@
 .Join {
     display: flex;
     padding: 0 2rem;
-    gap: 10rem;
+    gap: 3rem;
+    flex-direction: column;
 }
 
-.left-j {
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.left-j>hr {
+.Join>hr {
     position: absolute;
     width: 10.5rem;
     border: 2px solid var(--orange);
@@ -20,15 +13,30 @@
     margin: -10px 0;
 }
 
-.left-j>div {
+.Join>div:nth-of-type(1) {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.contact {
+    display: flex;
+    gap: 5rem;
+    padding: 0 2rem;
+}
+
+.Join>div {
     display: flex;
     gap: 1rem;
 }
 
-.right-j {
+.left-j {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    width: 50%;
 }
 
 .email-container {
@@ -36,13 +44,30 @@
     gap: 3rem;
     background-color: gray;
     padding: 1rem 2rem;
+    flex-direction: column;
 }
 
-.email-container>input {
+.email-container>.name-email,
+.email-container>textarea {
+    display: flex;
+    gap: 3rem;
+    background-color: gray;
+    padding: 1rem 2rem;
+}
+
+.email-container>.name-email>input {
     background-color: transparent;
     border: none;
     outline: none;
     color: var(--lightgray);
+}
+
+.email-container>textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--lightgray);
+    height: 50px;
 }
 
 ::placeholder {
@@ -51,24 +76,73 @@
 
 .btn-j {
     background-color: var(--orange);
+    color: white;
+}
+
+.right-j {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.right-j>.information {
+    display: flex;
+}
+
+.right-j>.information>.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.information>img {
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+}
+
+.info>span:nth-of-type(1){
+    font-size: 1.5rem;
+    color: var(--lightgray);
+}
+
+.info>span:nth-of-type(2){
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width: 768px) {
-    .Join {
+
+    .Join>div:nth-of-type(1){
+        flex-direction: column;
+    }
+    .contact {
         flex-direction: column;
         gap: 1rem;
     }
 
     .left-j {
-        font-size: x-large;
+        align-self: center;
+    }
+
+    .left-j>.email-container {
+        flex-direction: column;
+    }
+
+    .left-j>.email-container>.name-email {
         flex-direction: column;
     }
 
     .right-j {
-        padding: 2rem;
+        align-self: center;
+        padding: 1rem 0;
     }
 
-    .left-j>hr {
-        opacity: 0.9;
+    .Join>hr {
+        opacity: 0.7;
     }
 }
