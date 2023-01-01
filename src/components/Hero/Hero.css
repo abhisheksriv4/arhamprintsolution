@@ -252,3 +252,23 @@
         top: 0rem;
     }
 }
+@media screen and (min-width: 468px) {
+    .hero-image {
+        position: relative;
+        width: 10rem;
+        left: 15rem;
+        top: 7rem;
+        align-self: center;
+    }
+}
+
+
+@media screen and (min-width: 1030px) {
+    .hero-image {
+        position: absolute;
+        top: 10rem;
+        left: auto;
+        right: 6.5rem;
+        width: 25rem;
+    }
+}
