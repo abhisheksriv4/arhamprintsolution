@@ -1,5 +1,7 @@
+import j from "../assets/j.jpg";
 export const programsData = [
   {
+    backgroundImg: j,
     image: (
       <svg
         width="16"
@@ -14,6 +16,7 @@ export const programsData = [
     details: "Books, Bilty Book, Computrised Bilty, Rasheed Book, Bill Books",
   },
   {
+    backgroundImg: "",
     image: (
       <svg
         width="16"
@@ -33,6 +36,7 @@ export const programsData = [
     details: "Visiting Cards, Wedding Cards, ID Cards, Gate Pass",
   },
   {
+    backgroundImg: "",
     image: (
       <svg
         width="12"
@@ -47,6 +51,7 @@ export const programsData = [
     details: "ACP / LED / GLOW SIGN Board, CLADDING, LETTER CUTTING",
   },
   {
+    backgroundImg: "",
     image: (
       <svg
         width="20"
